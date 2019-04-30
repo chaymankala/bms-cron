@@ -5,7 +5,6 @@
         "start": "node ./index.js"
     },
     "dependencies": {
-        "@sendgrid/mail": "^6.3.1",
         "cheerio": "^1.0.0-rc.3",
         "express": "^4.16.4",
         "fs": "0.0.1-security",
