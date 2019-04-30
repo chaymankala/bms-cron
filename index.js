@@ -7,6 +7,7 @@ const url = process.env.URL1;
 const emails = process.env.EMAIL;
 const SMS_AUTH_KEY = process.env.SMS_AUTH_KEY;
 const phone_number = process.env.PHONE;
+const interval = process.env.INTERVAL || 30;
 
 
 const $ = require('cheerio');
@@ -19,7 +20,7 @@ var sent_sms = false;
 
 app = express();
 
-cron.schedule(`*/${process.env.INTERVAL || 30} * * * * *`, function () {
+cron.schedule(`*/${interval} * * * * *`, function () {
 
     rp(url)
         .then(async function (html) {
